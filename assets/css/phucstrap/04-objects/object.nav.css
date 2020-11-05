@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------
+# RESET LIST STYLES
+--------------------------------------------------------------*/
+.nav,
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*--------------------------------------------------------------
+# NAV DROPDOWN HORIZONTAL
+--------------------------------------------------------------*/
+.nav--dropdown {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+/* STYLE LINKS */
+.nav--dropdown .nav__link {
+    display: block;
+}
+  
+/* 1st Submenu */
+.nav--dropdown .nav__submenu {
+    display: none;
+    position: absolute;
+}
+  
+.nav--dropdown .nav__item:hover .nav__submenu {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# NAV DROPDOWN VERTICAL
+--------------------------------------------------------------*/

@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+# FOOTER
+--------------------------------------------------------------*/
+.footer {
+    margin-top: calc(var(--gutter) * 3);
+    background-color: var(--color-3);
+    color: var(--color-1);
+
+    font-size: .75em;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+} 
+
+.footer a:hover
+, .footer a:active
+, .footer a:focus {
+    color: var(--color-2);
+}
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: calc(var(--gutter) * 1);
+    padding-bottom: calc(var(--gutter) * 1);
+    margin-left: calc(var(--gutter) * -1);
+}
+
+.footer__item {
+    margin-left: var(--gutter);
+}
+
+.footer__item--wide {
+    flex-grow: 1;
+}

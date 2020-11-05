@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------
+# LAYOUT
+--------------------------------------------------------------*/
+:root {
+    --gutter: .8rem;
+    --gutter-description: var(--font-size);
+
+    --max-width: 120rem;
+    --max-width-2: 90rem;
+    --max-width-3: 60rem;
+}
+
+/*--------------------------------------------------------------
+# COLORS
+--------------------------------------------------------------*/
+:root {
+    --color-white: #fff;
+    --color-black: #101213;
+
+    --color-1: #303133;
+    --color-2: #777;
+    --color-3: #f0f0f0;
+
+    --color-4: #fff;
+    --color-5: #fafafa;
+}
+
+/*--------------------------------------------------------------
+# FONT
+--------------------------------------------------------------*/
+:root {
+    /* Font Family */
+    --font-family: 'Roboto', sans-serif;
+    --font-family-2: 'Roboto', sans-serif;
+
+    /* Modular Scale */
+    --font-size: 1.6rem;
+    --font-size-ratio: 1.125;
+    --line-height: 1.6;
+
+    /* Line Height */
+    --line-height-0: 1.1;
+    --line-height-1: 1.1;
+    --line-height-2: 1.1;
+    --line-height-3: 1.1;
+    --line-height-4: 1.1;
+    --line-height-5: var(--line-height);
+    --line-height-6: var(--line-height);
+    --line-height-7: var(--line-height);
+}
+
+@media all and (min-width:768px) {
+  :root {
+    --font-size: 1.6rem;
+    --gutter: 1.6rem;
+  }
+}
+
+@media all and (min-width:1024px) {
+  :root {
+    --font-size: 2rem;
+    --font-size-ratio: 1.2;
+    --gutter: 2.4rem;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# ANIMATION
+--------------------------------------------------------------*/
+:root {
+    --transition-time: .3s;
+    --transition-style : ease-in-out;
+}

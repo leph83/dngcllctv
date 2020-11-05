@@ -1,0 +1,229 @@
+/*--------------------------------------------------------------
+# HAMBURGER MENU
+--------------------------------------------------------------*/
+.burger-input {
+    display: none;
+  }
+  
+.burger-label {
+    position: relative;
+    z-index: 10000;
+}
+
+.navigation {
+    display: none;
+}
+
+.burger-input:checked ~ .navigation  {
+    display: block;
+}
+
+@media all and (min-width: 768px) {
+    .burger-label {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+    }
+}
+
+/*--------------------------------------------------------------
+# MOBILE NAV
+--------------------------------------------------------------*/
+@media all and (max-width: 767px) {
+    .header__item--nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        background-color: var(--color-5);
+    }
+
+    .nav--dropdown {
+        display: block;
+    }
+
+    .header__lang {
+        margin-top: var(--gutter);
+        margin-left: calc(var(--gutter) * .5);
+        padding-bottom: var(--gutter);
+    }
+
+    .nav--header .nav__item {
+
+    }
+
+    .nav--header .nav__link {
+        padding-top: var(--gutter);
+        padding-bottom: var(--gutter);
+        padding-left: var(--gutter);
+    }
+
+
+    /* active */
+    .nav--header .nav__item--active 
+    , .nav--header .current-menu-parent {
+        background-color: var(--color-white);
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# NAV HEADER
+--------------------------------------------------------------*/
+.nav--header {
+    text-transform: uppercase;
+}
+
+
+
+@media all and (min-width: 768px) {
+    .nav--header > .nav__item {
+        margin-left: var(--gutter);
+    }
+
+    .nav--header .nav__link {
+        border-bottom: 2px solid transparent;
+        border-top: 2px solid transparent;
+    }
+
+    /* hover */
+    .nav--header .nav__item:hover > .nav__link
+    , .nav--header .nav__item:active > .nav__link
+    , .nav--header .nav__item:focus > .nav__link {
+        border-bottom: 2px solid;
+    }
+
+    
+    /* active */
+    .nav--header  .nav__item--active > .nav__link
+    , .current-menu-parent > .nav__link {
+        font-weight: bold;
+    }
+
+    .nav--header .nav__item--active > .nav__link
+    , .nav--header .current-menu-parent > .nav__link {
+        border-bottom: 2px solid;
+    }
+}
+
+
+
+
+
+
+
+/* NAV HEADER SUBNAVIGATION */
+.nav--header .nav__submenu {
+    padding-top: var(--gutter);
+    margin-left: calc(var(--gutter) / -2);
+}
+
+.nav--header .nav__submenu .nav__item {
+    background-color: var(--color-white);
+}
+
+.nav--header .nav__submenu .nav__link {
+    padding: calc(var(--gutter) / 4) calc(var(--gutter) / 2) ;
+}
+
+.nav--header .nav__submenu .nav__item--active > .nav__link {
+    border-color: transparent;
+}
+
+.nav--header .nav__submenu .nav__link:hover
+, .nav--header .nav__submenu .nav__link:active
+, .nav--header .nav__submenu .nav__link:focus {
+    background-color: var(--color-3);
+    border-color: transparent;
+}
+
+
+/*--------------------------------------------------------------
+# NAV FOOTER
+--------------------------------------------------------------*/
+.nav--footer .nav__link {
+    display: block;
+    padding: calc(var(--gutter) / 3);
+}
+
+/*--------------------------------------------------------------
+# NAV LANGUAGE
+--------------------------------------------------------------*/
+.nav--language {
+    display: flex;
+}
+
+.nav--language .nav__link {
+    padding: calc(var(--gutter) / 3);
+}
+
+
+/*--------------------------------------------------------------
+# NAV PAGINATION SINGLE
+--------------------------------------------------------------*/
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-previous {
+
+} 
+
+.nav-next {
+    margin-left: auto;
+} 
+
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*--------------------------------------------------------------
+# FRIES
+--------------------------------------------------------------*/
+.fries
+, .burger-label:before
+, .burger-label:after {
+    width: calc(var(--gutter) * .5);
+    height: calc(var(--gutter) * 4);
+    background-color: var(--color-1);
+    display: block;
+    margin: calc(var(--gutter) * .25);
+    border-radius: .2em;
+
+    transition: height .3s ease-in-out;
+}
+
+.burger-label:before
+, .burger-label:after {
+    content: '';
+}
+
+.burger-label:before {
+    height: calc(var(--gutter) * 2.75);
+}
+
+.burger-label:after {
+    height: calc(var(--gutter) * 3);
+}
+
+@media all and (max-width: 767px) {
+    .burger-label {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+}
+
+
+.burger-input:checked ~ .burger-label:before
+, .burger-input:checked ~ .burger-label::after
+, .burger-input:checked ~ .fries {
+    height: calc(var(--gutter) * 4);
+}

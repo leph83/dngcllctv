@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+# HEADER
+--------------------------------------------------------------*/
+.header {
+   margin-bottom: var(--gutter);
+   padding: var(--gutter);
+   position: relative;
+}
+
+@media all and (min-width: 768px) {
+   .header {
+      margin-bottom: -35px;
+      padding: initial;
+   }
+
+   .header__nav {
+      flex-grow: 1;
+   }
+}
+
+
+.header__content {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header__item--nav {
+   flex-grow: 1;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   align-items: center;
+}
+
+.branding {
+   padding: calc(var(--gutter) / 3) 0;
+}
+
+.branding img {
+   max-width: 40px;
+}
+
+.header__item--lang {
+   margin-left: auto;
+   text-transform: uppercase;
+}
